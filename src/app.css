@@ -1,0 +1,370 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251);
+  /* Change to bg-pink-50 */
+  --foreground-rgb: 0, 0, 0;
+  transition: background-color 0.5s ease;
+  /* Add transition */
+}
+
+::selection {
+  background: rgb(79, 70, 229, 0.5);
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@keyframes spinning {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spinning {
+  animation: spinning 10s linear infinite;
+}
+
+@keyframes pulsing {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0.65;
+    transform: translateY(0%);
+  }
+
+  70% {
+    opacity: 0.65;
+    transform: translateY(-50%);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+}
+
+.animate-pulsing {
+  animation: pulsing 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-pulsing2 {
+  animation: pulsing2 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulsing2 {
+  0% {
+    opacity: 0;
+  }
+
+  45% {
+    transform: translateY(0%);
+    opacity: 0.65;
+  }
+
+  90% {
+    opacity: 0.65;
+    transform: translateY(-50%);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+}
+
+.animate-pulsing34 {
+  animation: pulsing3 15s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulsing3 {
+  0% {
+    opacity: 0.8;
+  }
+
+  45% {
+    opacity: 0.65;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.8;
+  }
+}
+
+.delayed-fade-in {
+  animation-name: animateFade;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-delay: 2s;
+  /* Add the desired delay here */
+  animation-fill-mode: both;
+}
+
+.fade-in {
+  delay: 5s;
+  animation: animateFade 0.5s ease 0.15s both;
+}
+
+@keyframes animateFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Define a CSS class for a radial gradient background */
+.radial-gradient-bg {
+  background: radial-gradient(
+    circle,
+    rgba(255, 0, 0, 0.1),
+    rgba(0, 0, 255, 0.1)
+  );
+  /* You can customize the gradient colors and positions here */
+  width: 400px;
+  height: 200px;
+}
+
+/* Define a CSS class for a box shadow arounde the full box*/
+.box-shadow {
+  box-shadow: 0px 0px 10px 10px rgba(239, 68, 68, 0.05);
+}
+
+@keyframes pulsing-move {
+  0% {
+    opacity: 0.6;
+    transform: translateX(0px);
+  }
+
+  25% {
+    opacity: 01;
+    scale: 1.5;
+    transform: translateY(25%);
+  }
+
+  35% {
+    opacity: 0.5;
+    scale: 0.75;
+    transform: translateX(12%);
+    transform: translateY(12%);
+  }
+
+  35% {
+    scale: 1;
+    opacity: 0.75;
+    transform: translateX(25%);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateX(58%) translateY(65%);
+    /* Combine both transformations */
+  }
+
+  73% {
+    opacity: 0.23;
+    scale: 1.75;
+    transform: translateX(70%) translateY(10%);
+    /* Combine both transformations */
+  }
+
+  83% {
+    opacity: 1;
+    scale: 1.75;
+    transform: translateX(70%) translateY(110%);
+    /* Combine both transformations */
+  }
+
+  100% {
+    opacity: 0.6;
+    scale: 1;
+    transform: translateX(0px) translateY(0px);
+    /* Combine both transformations */
+  }
+}
+
+.animate-pulsing-move {
+  animation: pulsing-move 50s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-in-slowly {
+  animation: animateInSlowly 0.5s ease 0.15s both;
+}
+
+@keyframes animateInSlowly {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  50% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-out {
+  animation: animateOut 0.3s ease 0.15s both;
+}
+
+.animate-in-main {
+  animation: animateInMain 0.3s ease 0.15s both;
+}
+
+@keyframes animateInMain {
+  from {
+    opacity: 0;
+    transform: translateY(120px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in-sec {
+  animation: animateInSec 0.3s ease 0.15s both;
+}
+
+@keyframes animateInSec {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in-thi {
+  animation: animateInThi 0.3s ease 0.15s both;
+}
+
+@keyframes animateInThi {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in-fou {
+  animation: animateInFou 0.3s ease 0.15s both;
+}
+
+@keyframes animateInFou {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-out {
+  animation: animateOut 0.3s ease 0.15s both;
+}
+
+.animate-in {
+  animation: animateIn 0.3s ease 0.15s both;
+}
+
+@keyframes animateIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-out {
+  animation: animateOut 0.3s ease 0.15s both;
+}
+
+@keyframes animateOut {
+  from {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+}
+
+.animate-in-slow {
+  animation: animateInSlow 1s ease 0.5s reverse;
+}
+
+@keyframes animateInSlow {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.loading:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  -webkit-animation: ellipsis steps(4, end) 900ms infinite;
+  animation: ellipsis steps(4, end) 900ms infinite;
+  content: '\2026';
+  /* ascii code for the ellipsis character */
+  width: 0px;
+}
+
+@keyframes ellipsis {
+  to {
+    width: 1.25em;
+  }
+}
+
+@-webkit-keyframes ellipsis {
+  to {
+    width: 1.25em;
+  }
+}
