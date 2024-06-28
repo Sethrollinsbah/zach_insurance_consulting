@@ -20,7 +20,7 @@
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "autoprefixer": "^10.4.17",
-    "eslint": "9.x",
+    "eslint": "^9.5.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-svelte": "^2.35.1",
     "eslint_d": "^13.1.2",
@@ -37,7 +37,7 @@
     "ts-migrate": "^0.1.35",
     "tslib": "^2.4.1",
     "typescript": "^5.0.0",
-    "typescript-eslint": "^7.10.0",
+    "typescript-eslint": "^7.14.1",
     "vite": "^5.0.3"
   },
   "type": "module",
